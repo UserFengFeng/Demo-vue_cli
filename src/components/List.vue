@@ -11,9 +11,7 @@
 <script>
 import Item from './Item.vue'
 export default {
-  props: {
-    comments: Object
-  },
+  props: ['comments'],
   data () {
     return {
     }

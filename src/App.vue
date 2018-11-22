@@ -24,7 +24,7 @@ export default {
       comments: [
         { user: 'people', content: 'react真不错' },
         { user: 'big', content: 'react一般般' },
-        { user: 'small', content: 'react666' }
+        { user: 'small', content: 'So Easy' }
       ]
     }
   },
