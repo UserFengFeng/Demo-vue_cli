@@ -10,7 +10,7 @@
       </div>
     </header>
     <div class="container">
-      <add />
+      <add :addComment="addComment" />
       <list :comments="comments" />
     </div>
   </div>
@@ -32,6 +32,12 @@ export default {
   components: {
     Add,
     List
+  },
+
+  methods: {
+    addComment (comment) {
+      this.comments.unshift(comment)
+    }
   }
 }
 </script>
