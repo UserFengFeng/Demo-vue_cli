@@ -11,7 +11,7 @@
     </header>
     <div class="container">
       <add />
-      <list />
+      <list :comments="comments" />
     </div>
   </div>
 </template>
@@ -20,7 +20,13 @@ import Add from './components/Add.vue'
 import List from './components/List.vue'
 export default {
   data () {
-    return {}
+    return {
+      comments: [
+        { user: 'people', content: 'react真不错' },
+        { user: 'big', content: 'react一般般' },
+        { user: 'small', content: 'react666' }
+      ]
+    }
   },
 
   components: {
