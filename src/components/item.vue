@@ -1,7 +1,7 @@
 <template>
   <li class="list-group-item">
     <div class="handle">
-      <a href="javascript:;">删除</a>
+      <a href="javascript:;" @click="deleteItem">删除</a>
     </div>
     <p class="user">{{comment.user}}说:</p>
     <p class="centence">{{comment.content}}</p>
@@ -10,9 +10,17 @@
 
 <script>
 export default {
-  props: ['comment'],
+  props: ['comment', 'index', 'deleteComment'],
   data () {
     return {
+    }
+  },
+  methods: {
+    deleteItem () {
+      const {comment, index, deleteComment} = this
+      if (window.confirm(`您要确定要删除${comment.name}的评论吗`)) {
+        deleteComment(index)
+      }
     }
   }
 }

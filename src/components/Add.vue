@@ -49,6 +49,10 @@ export default {
 
       // 3.添加到comments（重要强调，数据在哪就在哪做更新）
       this.addComment(comment)
+
+      // 4.清除输入
+      this.user = ''
+      this.content = ''
     }
   }
 }
